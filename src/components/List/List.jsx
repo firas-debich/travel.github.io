@@ -16,7 +16,7 @@ function List() {
   const [type, setType] = useState("restaurants");
   const [rating, setRating] = useState("");
   const classes = useStyles();
-  const places = [{name:"hay firas "},];
+  const places = [{ name: "hay firas " }];
   return (
     <div className={classes.container}>
       <Typography variant="h4">
@@ -47,11 +47,13 @@ function List() {
           <MenuItem value="4.5">Above 4.5</MenuItem>
         </Select>
       </FormControl>
-      <Grid container spacing={3}  className={classes.list}>
+      <Grid container spacing={3} className={classes.list}>
         {places?.map((place, idx) => {
-          return <Grid item key={idx} xs={12}>
-              <PlaceDetails place={place}/>
-          </Grid>;
+          return (
+            <Grid item key={idx} xs={12}>
+              <PlaceDetails place={place} />
+            </Grid>
+          );
         })}
       </Grid>
     </div>

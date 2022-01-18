@@ -2,9 +2,9 @@ import React from 'react'
 
 function PlaceDetails({place}) {
     return (
-        <div>
+        <h1>
                 {place.name}
-        </div>
+        </h1>
     )
 }
 

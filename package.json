@@ -2,7 +2,7 @@
   "name": "travel.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": " https://github.com/firas-debich/travel.github.io/",
+  "homepage": "https://firas-debich.github.io/travel.github.io/",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",

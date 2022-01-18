@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/firas-debich/travel.github.io/static/js/main.9ece5feb.js",
-    "index.html": "/firas-debich/travel.github.io/index.html",
-    "main.9ece5feb.js.map": "/firas-debich/travel.github.io/static/js/main.9ece5feb.js.map"
+    "main.js": "/travel.github.io/static/js/main.9ece5feb.js",
+    "index.html": "/travel.github.io/index.html",
+    "main.9ece5feb.js.map": "/travel.github.io/static/js/main.9ece5feb.js.map"
   },
   "entrypoints": [
     "static/js/main.9ece5feb.js"

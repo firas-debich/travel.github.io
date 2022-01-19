@@ -22,12 +22,12 @@ function App() {
 
   useEffect(()=>{
     setIsLoading(true)
-     getPlacesData(bounds?.sw,bounds?.ne)
+     getPlacesData( type ,bounds?.sw,bounds?.ne)
         .then((data)=>{
           setData(data)
           setIsLoading(false)
         })  
-  },[bounds,coordinates])
+  },[bounds,coordinates,type])
 
   return (
     <>

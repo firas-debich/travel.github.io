@@ -3,7 +3,7 @@ import axios from "axios";
 
 const URL = process.env.REACT_APP_API_URL
 
-export  const getPlacesData = async(sw,ne)=>{
+export  const getPlacesData = async(type,sw,ne)=>{
     const options = {
  
         params: {
@@ -19,7 +19,7 @@ export  const getPlacesData = async(sw,ne)=>{
         }
       };
     try{
-        const {data:{data}} = await axios.get(URL,options)
+        const {data:{data}} = await axios.get(`${URL}${type}/list-in-boundary`,options)
         return data ;
     }
     catch(error){

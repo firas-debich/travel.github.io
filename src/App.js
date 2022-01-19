@@ -18,7 +18,7 @@ function App() {
   },[])
 
   useEffect(()=>{
-     getPlacesData()
+     getPlacesData(bounds?.sw,bounds?.ne)
         .then((data)=>{
           setData(data)
         })  

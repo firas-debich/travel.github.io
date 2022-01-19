@@ -4,7 +4,7 @@ import { Paper, Typography, useMediaQuery } from "@material-ui/core";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import Rating from "@material-ui/lab/Rating";
 import useStyles from "./styles.js";
-import mapStyles from "./mapStyles"
+import {mapStyles} from "./mapStyles"
 function Map({setCoordinates , setBounds ,coordinates,places,setChildClicked,WeatherData}) {
   const classes = useStyles();
   const matches = useMediaQuery('(min-width:600px)');

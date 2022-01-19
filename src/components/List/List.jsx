@@ -12,9 +12,8 @@ import {
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 import useStyles from "./styles.js";
 
-function List({places,childClicked,isLoading}) {
-  const [type, setType] = useState("restaurants");
-  const [rating, setRating] = useState("");
+function List({places,childClicked,isLoading,type,setType,rating,setRating}) {
+ 
   const [ref, setRef] = useState([])
   const classes = useStyles();
   useEffect(()=>{

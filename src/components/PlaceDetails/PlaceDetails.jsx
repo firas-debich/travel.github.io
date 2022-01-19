@@ -17,6 +17,22 @@ function PlaceDetails({place}) {
           />
          <CardContent>
         <Typography gutterBottom variant="h5">{place.name}</Typography>
+
+        
+        <Box display="flex" justifyContent="space-between">
+          <Typography component="legend">Price</Typography>
+          <Typography gutterBottom variant="subtitle1">
+            {place.price_level}
+          </Typography>
+        </Box>
+        <Box display="flex" justifyContent="space-between">
+          <Typography component="legend">Ranking</Typography>
+          <Typography gutterBottom variant="subtitle1">
+            {place.ranking}
+          </Typography>
+        </Box>
+
+
             </CardContent>
       </Card>
     )

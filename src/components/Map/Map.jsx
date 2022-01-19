@@ -4,7 +4,7 @@ import { Paper, Typography, useMediaQuery } from "@material-ui/core";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import Rating from "@material-ui/lab/Rating";
 import useStyles from "./styles.js";
-function Map({setCoordinates , setBounds ,coordinates,places,setChildClicked}) {
+function Map({setCoordinates , setBounds ,coordinates,places,setChildClicked,WeatherData}) {
   const classes = useStyles();
   const matches = useMediaQuery('(min-width:600px)');
   
@@ -47,7 +47,11 @@ function Map({setCoordinates , setBounds ,coordinates,places,setChildClicked}) {
               )}
           </div>
         ))}
-       
+         {WeatherData?.list?.length && WeatherData?.list.map((data, i) => (
+          <div key={i} lat={data.coord.lat} lng={data.coord.lon}>
+            <img src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`} height="70px" alt=""/>
+          </div>
+        ))}
       </GoogleMapReact>
     </div>
   );

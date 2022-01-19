@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/travel.github.io/static/js/main.d4ccd883.js",
+    "main.js": "/travel.github.io/static/js/main.c2bc7db4.js",
     "index.html": "/travel.github.io/index.html",
-    "main.d4ccd883.js.map": "/travel.github.io/static/js/main.d4ccd883.js.map"
+    "main.c2bc7db4.js.map": "/travel.github.io/static/js/main.c2bc7db4.js.map"
   },
   "entrypoints": [
-    "static/js/main.d4ccd883.js"
+    "static/js/main.c2bc7db4.js"
   ]
 }

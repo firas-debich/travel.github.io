@@ -15,8 +15,9 @@ function PlaceDetails({place}) {
           
           
           />
-
-
+         <CardContent>
+        <Typography gutterBottom variant="h5">{place.name}</Typography>
+            </CardContent>
       </Card>
     )
 }

@@ -22,7 +22,7 @@ function App() {
     );
   }, []);
   useEffect(() => {
-    const filtered = data.filter((place) => Number(place.rating) > rating);
+    const filtered = data?.filter((place) => Number(place.rating) >= rating);
 
     setFilteredPlaces(filtered);
   }, [rating]);

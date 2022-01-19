@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect,createRef } from "react";
 import {
   CircularProgress,
   Grid,
@@ -12,16 +12,27 @@ import {
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 import useStyles from "./styles.js";
 
-function List({places}) {
+function List({places,childClicked,isLoading}) {
   const [type, setType] = useState("restaurants");
   const [rating, setRating] = useState("");
+  const [ref, setRef] = useState([])
   const classes = useStyles();
+  useEffect(()=>{
+        const refs = Array(places?.length).fill().map((_,i)=>ref[i]|| createRef())
+        setRef(refs)
+  },[places])
  
   return (
     <div className={classes.container}>
       <Typography variant="h4">
         Restaurants, Hotels & Attraction around you
       </Typography>
+      {isLoading ? (
+        <div className={classes.loading}>
+          <CircularProgress size="5rem" />
+        </div>
+      ):
+      <>
       <FormControl className={classes.formControl}>
         <InputLabel>Type</InputLabel>
         <Select
@@ -49,13 +60,14 @@ function List({places}) {
       </FormControl>
       <Grid container spacing={3} className={classes.list}>
         {places?.map((place, idx) => {
-          return (
-            <Grid item key={idx} xs={12}>
-              <PlaceDetails place={place} />
+            return  (
+                <Grid  item key={idx} xs={12} ref={ref[idx]}>
+              <PlaceDetails  selected={Number(childClicked) === idx} refProp={ref[idx]} place={place} />
             </Grid>
           );
         })}
       </Grid>
+      </>}
     </div>
   );
 }
